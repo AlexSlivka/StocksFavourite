@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">StocksFavourite</string>
+    <string name="menu_stocks">Stocks</string>
+    <string name="menu_favourite">Favourite</string>
+    <string name="search_default_text">Find company or ticker</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
