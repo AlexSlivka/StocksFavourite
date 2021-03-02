@@ -5,37 +5,38 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/tv_menu_stocks_on_fragment_of_stocks"
+        android:id="@+id/tv_menu_stocks_on_fragment_of_favourite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_menu"
+        android:layout_marginTop="6dp"
         android:text="@string/menu_stocks"
-        android:textSize="@dimen/menu_size_big"
+        android:textColor="@color/color_menu_other"
+        android:textSize="@dimen/menu_size_little"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_menu_favourite_on_fragment_of_stocks"
+        android:id="@+id/tv_menu_favourite_on_fragment_of_favourite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_menu"
-        android:paddingBottom="3dp"
         android:text="@string/menu_favourite"
-        android:textColor="@color/color_menu_other"
+        android:textSize="@dimen/menu_size_big"
         android:textStyle="bold"
-        android:textSize="@dimen/menu_size_little"
-        app:layout_constraintBottom_toBottomOf="@id/tv_menu_stocks_on_fragment_of_stocks"
-        app:layout_constraintStart_toEndOf="@id/tv_menu_stocks_on_fragment_of_stocks" />
+        app:layout_constraintBottom_toBottomOf="@id/tv_menu_stocks_on_fragment_of_favourite"
+        app:layout_constraintStart_toEndOf="@id/tv_menu_stocks_on_fragment_of_favourite"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_stocks_list"
+        android:id="@+id/rv_favourite_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="@dimen/margin_recycler"
         android:layout_marginTop="@dimen/margin_menu"
         android:layout_marginEnd="@dimen/margin_recycler"
-        app:layout_constraintTop_toBottomOf="@id/tv_menu_stocks_on_fragment_of_stocks" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_menu_stocks_on_fragment_of_favourite" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

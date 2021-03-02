@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="@string/search_default_text"
-        android:textSize="24sp"
+        android:textSize="16sp"
         android:layout_marginStart="12dp"
         android:layout_marginEnd="@dimen/margin_search_horizontal"
         app:layout_constraintStart_toEndOf="@id/iv_search"

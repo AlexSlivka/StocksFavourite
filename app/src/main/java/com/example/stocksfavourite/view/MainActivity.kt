@@ -12,9 +12,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                    .add(R.id.top_container, MainSearchFragment())
-                    .add(R.id.bottom_container, StocksFragment())
-                    .commit()
+                .add(R.id.top_container, MainSearchFragment())
+                .add(R.id.bottom_container, StocksFragment())
+                .commit()
         }
     }
 }
