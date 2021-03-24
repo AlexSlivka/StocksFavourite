@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="color_menu_other">#BABABA</color>
+    <color name="color_price_change">#24B25D</color>
 </resources>

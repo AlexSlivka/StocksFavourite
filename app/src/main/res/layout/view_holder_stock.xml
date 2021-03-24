@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="68dp">
+
+    <ImageView
+        android:id="@+id/iv_logo_stock"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/logo_yndx" />
+
+    <TextView
+        android:id="@+id/tv_ticker_stock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="YNDX"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_item_large"
+        app:layout_constraintStart_toEndOf="@id/iv_logo_stock"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="14dp"/>
+
+    <TextView
+        android:id="@+id/tv_company_stock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Yandex, LLC"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_item_small"
+        app:layout_constraintStart_toStartOf="@id/tv_ticker_stock"
+        app:layout_constraintTop_toBottomOf="@id/tv_ticker_stock"/>
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="72.16"
+        android:layout_marginEnd="16dp"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_item_large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_ticker_stock"/>
+
+    <TextView
+        android:id="@+id/tv_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="$"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_item_large"
+        app:layout_constraintEnd_toStartOf="@id/tv_price"
+        app:layout_constraintTop_toTopOf="@id/tv_price"/>
+
+    <TextView
+        android:id="@+id/tv_price_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="+$0.12 (1.15%)"
+        android:textSize="@dimen/text_size_item_small"
+        android:textColor="@color/color_price_change"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_company_stock"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    priceChangePerDay

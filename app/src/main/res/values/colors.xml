@@ -8,4 +8,5 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="color_menu_other">#BABABA</color>
+    <color name="color_price_change">#24B25D</color>
 </resources>
