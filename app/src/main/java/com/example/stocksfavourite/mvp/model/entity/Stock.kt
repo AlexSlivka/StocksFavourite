@@ -1,4 +1,4 @@
-package com.example.stocksfavourite.model
+package com.example.stocksfavourite.mvp.model.entity
 
 data class Stock(val tickerStock: String = "",
                  val logoStock: Int,

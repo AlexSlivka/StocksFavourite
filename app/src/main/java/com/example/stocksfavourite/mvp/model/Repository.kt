@@ -1,6 +1,7 @@
-package com.example.stocksfavourite.model
+package com.example.stocksfavourite.mvp.model
 
 import com.example.stocksfavourite.R
+import com.example.stocksfavourite.mvp.model.entity.Stock
 
 class Repository {
     fun getStocks(): List<Stock> {

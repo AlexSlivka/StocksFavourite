@@ -1,10 +1,10 @@
-package com.example.stocksfavourite.view
+package com.example.stocksfavourite.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.stocksfavourite.R
-import com.example.stocksfavourite.view.fragments.MainSearchFragment
-import com.example.stocksfavourite.view.fragments.StocksFragment
+import com.example.stocksfavourite.ui.fragment.MainSearchFragment
+import com.example.stocksfavourite.ui.fragment.StocksFragment
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

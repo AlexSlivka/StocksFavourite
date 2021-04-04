@@ -1,4 +1,4 @@
-package com.example.stocksfavourite.view.fragments
+package com.example.stocksfavourite.ui.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
