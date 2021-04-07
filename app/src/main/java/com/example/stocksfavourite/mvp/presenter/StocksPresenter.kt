@@ -10,10 +10,16 @@ import javax.inject.Named
 
 class StocksPresenter() : MvpPresenter<StocksView>() {
 
-    @field:Named("ui") @Inject lateinit var uiScheduler: Scheduler
+    @field:Named("ui")
+    @Inject
+    lateinit var uiScheduler: Scheduler
+
     //   @Inject lateinit var usersRepo: IGithubUsersRepo
-    @Inject lateinit var screens: IScreens
-    @Inject lateinit var router: Router
+    @Inject
+    lateinit var screens: IScreens
+
+    @Inject
+    lateinit var router: Router
 
     /*   class UsersListPresenter : IUserListPresenter {
            val users = mutableListOf<GithubUser>()
@@ -56,5 +62,9 @@ class StocksPresenter() : MvpPresenter<StocksView>() {
     fun backPressed(): Boolean {
         router.exit()
         return true
+    }
+
+    fun toFavourite() {
+        router.replaceScreen(screens.favourite())
     }
 }

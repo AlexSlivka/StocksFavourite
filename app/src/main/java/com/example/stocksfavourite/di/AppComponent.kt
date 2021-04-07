@@ -21,4 +21,4 @@ interface AppComponent {
     fun inject(mainActivity: MainActivity)
     fun inject(stocksPresenter: StocksPresenter)
     fun inject(favouritePresenter: FavouritePresenter)
-}}
+}
