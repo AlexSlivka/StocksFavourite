@@ -1,5 +1,6 @@
 package com.example.stocksfavourite.di
 
+import com.example.stocksfavourite.di.module.ApiModule
 import com.example.stocksfavourite.di.module.AppModule
 import com.example.stocksfavourite.di.module.CiceroneModule
 import com.example.stocksfavourite.mvp.presenter.FavouritePresenter
@@ -13,7 +14,8 @@ import javax.inject.Singleton
 @Component(
     modules = [
         AppModule::class,
-        CiceroneModule::class
+        CiceroneModule::class,
+        ApiModule::class
     ]
 )
 

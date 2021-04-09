@@ -1,6 +1,8 @@
 package com.example.stocksfavourite.mvp.presenter
 
+import com.example.stocksfavourite.mvp.model.entity.Stock
 import com.example.stocksfavourite.mvp.model.navigation.IScreens
+import com.example.stocksfavourite.mvp.presenter.list.IStockListPresenter
 import com.example.stocksfavourite.mvp.view.StocksView
 import com.github.terrakok.cicerone.Router
 import io.reactivex.rxjava3.core.Scheduler
@@ -21,43 +23,43 @@ class StocksPresenter() : MvpPresenter<StocksView>() {
     @Inject
     lateinit var router: Router
 
-    /*   class UsersListPresenter : IUserListPresenter {
-           val users = mutableListOf<GithubUser>()
-           override var itemClickListener: ((UserItemView) -> Unit)? = null
+     class StocksListPresenter : IStockListPresenter {
+           val stocks = mutableListOf<Stock>()
+           override var itemClickListener: ((StockItemView) -> Unit)? = null
 
-           override fun getCount() = users.size
+           override fun getCount() = stocks.size
 
-           override fun bindView(view: UserItemView) {
-               val user = users[view.pos]
-               user.login?.let { view.setLogin(it) }
-               user.avatarUrl?.let {view.loadAvatar(it)}
+           override fun bindView(view: StockItemView) {
+               val stock = stocks[view.pos]
+               stock.tickerStock.let { view.setTicker(it) }
+               stock.company.let {view.setNameCompany(it)}
+
            }
        }
 
-       val usersListPresenter = UsersListPresenter()
-   */
+       val stocksListPresenter = StocksListPresenter()
+
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
         viewState.init()
-        //     loadData()
-
-        /*       usersListPresenter.itemClickListener = { itemView ->
-                   val user = usersListPresenter.users[itemView.pos]
-                   router.navigateTo(screens.user(user))
-               }*/
+            loadData()
+              stocksListPresenter.itemClickListener = { itemView ->
+                   val stock = stocksListPresenter.stocks[itemView.pos]
+                   router.navigateTo(screens.stockCard(stock))
+               }
     }
 
-    /*  fun loadData() {
+      fun loadData() {
           usersRepo.getUsers()
               .observeOn(uiScheduler)
               .subscribe({ repos ->
-                  usersListPresenter.users.clear()
-                  usersListPresenter.users.addAll(repos)
+                  stocksListPresenter.stocks.clear()
+                  stocksListPresenter.stocks.addAll(repos)
                   viewState.updateList()
               }, {
                   println("Error: ${it.message}")
               })
-      } */
+      }
 
     fun backPressed(): Boolean {
         router.exit()

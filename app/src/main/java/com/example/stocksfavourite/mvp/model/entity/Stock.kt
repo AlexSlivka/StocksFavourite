@@ -1,9 +1,13 @@
 package com.example.stocksfavourite.mvp.model.entity
 
-data class Stock(val tickerStock: String = "",
-                 val logoStock: Int,
-                 val company: String = "",
-                 val currency: String = "",
-                 val currentPrice: Double = 100.1,
-                 val priceChangePerDay: Double = 0.01,
-                 val favourite: Boolean = false)
+import android.os.Parcelable
+import com.google.gson.annotations.Expose
+import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
+data class Stock(
+    @SerializedName("symbol") @Expose val tickerStock: String,
+    @SerializedName("description") @Expose val company: String
+) : Parcelable
+
