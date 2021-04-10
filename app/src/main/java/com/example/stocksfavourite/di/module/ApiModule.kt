@@ -1,7 +1,9 @@
 package com.example.stocksfavourite.di.module
 
 import com.example.stocksfavourite.mvp.model.api.IDataSource
+import com.example.stocksfavourite.mvp.model.network.INetworkStatus
 import com.example.stocksfavourite.ui.App
+import com.example.stocksfavourite.ui.network.AndroidNetworkStatus
 import com.google.gson.FieldNamingPolicy
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder

@@ -15,7 +15,7 @@ class FavouritePresenter() : MvpPresenter<FavouriteView>() {
     @Inject
     lateinit var uiScheduler: Scheduler
 
-    //   @Inject lateinit var usersRepo: IGithubUsersRepo
+    @Inject lateinit var usersRepo: IGithubUsersRepo
     @Inject
     lateinit var screens: IScreens
 

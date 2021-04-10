@@ -8,6 +8,7 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class Stock(
     @SerializedName("symbol") @Expose val tickerStock: String,
-    @SerializedName("description") @Expose val company: String
+    @SerializedName("description") @Expose val company: String,
+    val favourite: Boolean = false
 ) : Parcelable
 

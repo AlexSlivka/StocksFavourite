@@ -2,6 +2,7 @@ package com.example.stocksfavourite.mvp.presenter
 
 import com.example.stocksfavourite.mvp.model.entity.Stock
 import com.example.stocksfavourite.mvp.model.navigation.IScreens
+import com.example.stocksfavourite.mvp.model.repo.IGithubUsersRepo
 import com.example.stocksfavourite.mvp.presenter.list.IStockListPresenter
 import com.example.stocksfavourite.mvp.view.StocksView
 import com.example.stocksfavourite.mvp.view.list.StockItemView
@@ -18,7 +19,7 @@ class StocksPresenter() : MvpPresenter<StocksView>() {
     @Inject
     lateinit var uiScheduler: Scheduler
 
-    //   @Inject lateinit var usersRepo: IGithubUsersRepo
+     @Inject lateinit var usersRepo: IGithubUsersRepo
     @Inject
     lateinit var screens: IScreens
 
