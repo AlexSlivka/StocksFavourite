@@ -2,8 +2,8 @@ package com.example.stocksfavourite.di.module
 
 import com.example.stocksfavourite.mvp.model.entity.room.db.Database
 import androidx.room.Room
-import com.example.stocksfavourite.mvp.model.cache.IGithubUsersCache
-import com.example.stocksfavourite.mvp.model.cache.room.RoomGithubUsersCache
+import com.example.stocksfavourite.mvp.model.cache.IStocksCache
+import com.example.stocksfavourite.mvp.model.cache.room.RoomStocksCache
 import com.example.stocksfavourite.ui.App
 import dagger.Module
 import dagger.Provides
@@ -19,7 +19,7 @@ class CacheModule {
 
     @Singleton
     @Provides
-    fun usersCache(db: Database): IGithubUsersCache = RoomGithubUsersCache(db)
+    fun stocksCache(db: Database): IStocksCache = RoomStocksCache(db)
 
  /*   @Singleton
     @Provides

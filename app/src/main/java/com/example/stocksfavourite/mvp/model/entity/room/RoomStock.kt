@@ -6,7 +6,7 @@ import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
 @Entity
-class RoomGithubUser(
+class RoomStock(
     @PrimaryKey val tickerStock: String,
     val company: String,
     val favourite: Boolean

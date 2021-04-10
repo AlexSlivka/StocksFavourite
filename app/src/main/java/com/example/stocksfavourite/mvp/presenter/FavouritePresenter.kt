@@ -1,8 +1,8 @@
 package com.example.stocksfavourite.mvp.presenter
 
 import com.example.stocksfavourite.mvp.model.navigation.IScreens
+import com.example.stocksfavourite.mvp.model.repo.IStocksRepo
 import com.example.stocksfavourite.mvp.view.FavouriteView
-import com.example.stocksfavourite.mvp.view.StocksView
 import com.github.terrakok.cicerone.Router
 import io.reactivex.rxjava3.core.Scheduler
 import moxy.MvpPresenter
@@ -15,7 +15,7 @@ class FavouritePresenter() : MvpPresenter<FavouriteView>() {
     @Inject
     lateinit var uiScheduler: Scheduler
 
-    @Inject lateinit var usersRepo: IGithubUsersRepo
+   // @Inject lateinit var StocksRepo: IStocksRepo
     @Inject
     lateinit var screens: IScreens
 

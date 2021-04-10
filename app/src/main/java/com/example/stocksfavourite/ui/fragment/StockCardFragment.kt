@@ -29,7 +29,11 @@ class StockCardFragment : MvpAppCompatFragment(), StockCardView, BackButtonListe
         StockCardPresenter(repository)
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?) =
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ) =
         FragmentStockCardBinding.inflate(inflater, container, false).also {
             vb = it
         }.root

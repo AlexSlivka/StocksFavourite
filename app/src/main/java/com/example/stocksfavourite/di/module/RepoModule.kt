@@ -2,9 +2,9 @@ package com.example.stocksfavourite.di.module
 
 import com.example.stocksfavourite.mvp.model.network.INetworkStatus
 import com.example.stocksfavourite.mvp.model.api.IDataSource
-import com.example.stocksfavourite.mvp.model.cache.IGithubUsersCache
-import com.example.stocksfavourite.mvp.model.repo.IGithubUsersRepo
-import com.example.stocksfavourite.mvp.model.repo.RetrofitGithubUsersRepo
+import com.example.stocksfavourite.mvp.model.cache.IStocksCache
+import com.example.stocksfavourite.mvp.model.repo.IStocksRepo
+import com.example.stocksfavourite.mvp.model.repo.RetrofitStocksRepo
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -14,11 +14,11 @@ class RepoModule {
 
     @Singleton
     @Provides
-    fun usersRepo(
+    fun stocksRepo(
         api: IDataSource,
         networkStatus: INetworkStatus,
-        cache: IGithubUsersCache
-    ): IGithubUsersRepo = RetrofitGithubUsersRepo(api, networkStatus, cache)
+        cache: IStocksCache
+    ): IStocksRepo = RetrofitStocksRepo(api, networkStatus, cache)
 
 
    /* @Singleton

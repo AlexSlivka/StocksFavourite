@@ -3,15 +3,15 @@ package com.example.stocksfavourite.mvp.model.entity.room.db
 import android.content.Context
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.stocksfavourite.mvp.model.entity.room.RoomGithubUser
-import com.example.stocksfavourite.mvp.model.entity.room.dao.UserDao
+import com.example.stocksfavourite.mvp.model.entity.room.RoomStock
+import com.example.stocksfavourite.mvp.model.entity.room.dao.StockDao
 
 @androidx.room.Database(
-    entities = [RoomGithubUser::class],  //entities = [RoomGithubUser::class, RoomGithubRepository::class, RoomCachedImage::class],
+    entities = [RoomStock::class],  //entities = [RoomGithubUser::class, RoomGithubRepository::class, RoomCachedImage::class],
     version = 1
 )
 abstract class Database : RoomDatabase() {
-    abstract val userDao: UserDao
+    abstract val stockDao: StockDao
     // abstract val repositoryDao: RepositoryDao
     // abstract val imageDao: ImageDao
 
