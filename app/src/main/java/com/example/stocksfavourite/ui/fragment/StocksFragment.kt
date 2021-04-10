@@ -4,14 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.fragment.app.Fragment
-import com.example.stocksfavourite.R
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.stocksfavourite.databinding.FragmentStocksBinding
 import com.example.stocksfavourite.mvp.presenter.StocksPresenter
 import com.example.stocksfavourite.mvp.view.StocksView
 import com.example.stocksfavourite.ui.App
 import com.example.stocksfavourite.ui.BackButtonListener
+import com.example.stocksfavourite.ui.adapter.StocksRVAdapter
 import moxy.MvpAppCompatFragment
 import moxy.ktx.moxyPresenter
 
@@ -26,7 +25,7 @@ class StocksFragment : MvpAppCompatFragment(), StocksView, BackButtonListener {
         }
     }
 
-    //    var adapter: UsersRVAdapter? = null
+    var adapter: StocksRVAdapter? = null
     private var vb: FragmentStocksBinding? = null
 
     override fun onCreateView(
@@ -47,18 +46,18 @@ class StocksFragment : MvpAppCompatFragment(), StocksView, BackButtonListener {
     }
 
     override fun init() {
-        /*   vb?.rvUsers?.layoutManager = LinearLayoutManager(context)
-           adapter = UsersRVAdapter(
-               presenter.usersListPresenter
-           ).apply { App.instance.appComponent.inject(this) }
+        vb?.rvStocksList?.layoutManager = LinearLayoutManager(context)
+        adapter = StocksRVAdapter(
+            presenter.stocksListPresenter
+        ).apply { App.instance.appComponent.inject(this) }
 
-           vb?.rvUsers?.adapter = adapter
+        vb?.rvStocksList?.adapter = adapter
 
-         */
+
     }
 
     override fun updateList() {
-        //  adapter?.notifyDataSetChanged()
+        adapter?.notifyDataSetChanged()
     }
 
     override fun backPressed() = presenter.backPressed()

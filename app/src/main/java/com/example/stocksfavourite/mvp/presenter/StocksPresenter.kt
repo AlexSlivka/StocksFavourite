@@ -4,6 +4,8 @@ import com.example.stocksfavourite.mvp.model.entity.Stock
 import com.example.stocksfavourite.mvp.model.navigation.IScreens
 import com.example.stocksfavourite.mvp.presenter.list.IStockListPresenter
 import com.example.stocksfavourite.mvp.view.StocksView
+import com.example.stocksfavourite.mvp.view.list.StockItemView
+import com.example.stocksfavourite.ui.adapter.StocksRVAdapter
 import com.github.terrakok.cicerone.Router
 import io.reactivex.rxjava3.core.Scheduler
 import moxy.MvpPresenter
@@ -29,10 +31,11 @@ class StocksPresenter() : MvpPresenter<StocksView>() {
 
            override fun getCount() = stocks.size
 
-           override fun bindView(view: StockItemView) {
+           override fun bindView(view: StocksRVAdapter.ViewHolder) {
                val stock = stocks[view.pos]
                stock.tickerStock.let { view.setTicker(it) }
                stock.company.let {view.setNameCompany(it)}
+               view.setStarFavourite(1F)
 
            }
        }

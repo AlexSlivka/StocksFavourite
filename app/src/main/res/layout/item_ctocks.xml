@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tv_ticker_stock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="YNDX"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_item_large"
+        android:textColor="@color/purple_200"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+       />
+
+    <TextView
+        android:id="@+id/tv_company_stock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Yandex, LLC"
+        android:textStyle="normal"
+        android:textSize="@dimen/text_size_item_large"
+        app:layout_constraintStart_toEndOf="@id/tv_ticker_stock"
+        app:layout_constraintBottom_toBottomOf="@id/tv_ticker_stock"
+        android:layout_marginStart="8dp"
+        />
+
+    <RatingBar
+        android:id="@+id/rb_star_favourite"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        android:layout_marginEnd="12dp"
+        android:numStars="1"
+        android:progressBackgroundTint="@color/dark_grey_of_reviews"
+        android:progressTint="@color/color_of_genre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/tv_ticker_stock"
+        app:layout_constraintTop_toTopOf="@id/tv_ticker_stock"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

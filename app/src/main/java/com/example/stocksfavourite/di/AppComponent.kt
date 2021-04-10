@@ -7,6 +7,7 @@ import com.example.stocksfavourite.mvp.presenter.FavouritePresenter
 import com.example.stocksfavourite.mvp.presenter.MainPresenter
 import com.example.stocksfavourite.mvp.presenter.StocksPresenter
 import com.example.stocksfavourite.ui.activity.MainActivity
+import com.example.stocksfavourite.ui.adapter.StocksRVAdapter
 import dagger.Component
 import javax.inject.Singleton
 
@@ -25,4 +26,5 @@ interface AppComponent {
     fun inject(mainPresenter: MainPresenter)
     fun inject(stocksPresenter: StocksPresenter)
     fun inject(favouritePresenter: FavouritePresenter)
+    fun inject(stocksRVAdapter: StocksRVAdapter)
 }
