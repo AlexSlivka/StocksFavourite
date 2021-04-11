@@ -1,5 +1,6 @@
 package com.example.stocksfavourite.mvp.presenter
 
+import com.example.stocksfavourite.mvp.model.entity.Company
 import com.example.stocksfavourite.mvp.model.entity.Stock
 import com.example.stocksfavourite.mvp.view.StockCardView
 import com.github.terrakok.cicerone.Router
@@ -10,6 +11,8 @@ class StockCardPresenter (val stock: Stock) : MvpPresenter<StockCardView>() {
 
     @Inject
     lateinit var router: Router
+
+   // val companyInfo = Company()
 
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()

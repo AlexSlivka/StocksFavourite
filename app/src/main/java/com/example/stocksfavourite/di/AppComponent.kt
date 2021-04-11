@@ -29,3 +29,5 @@ interface AppComponent {
     fun inject(stockCardPresenter: StockCardPresenter)
     fun inject(stocksRVAdapter: StocksRVAdapter)
 }
+
+
