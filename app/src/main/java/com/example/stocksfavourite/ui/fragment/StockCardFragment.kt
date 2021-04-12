@@ -7,6 +7,7 @@ import com.example.stocksfavourite.databinding.FragmentStockCardBinding
 import com.example.stocksfavourite.mvp.model.entity.Stock
 import com.example.stocksfavourite.mvp.presenter.StockCardPresenter
 import com.example.stocksfavourite.mvp.view.StockCardView
+import com.example.stocksfavourite.ui.App
 import com.example.stocksfavourite.ui.BackButtonListener
 import moxy.MvpAppCompatFragment
 import moxy.ktx.moxyPresenter
@@ -26,7 +27,9 @@ class StockCardFragment : MvpAppCompatFragment(), StockCardView, BackButtonListe
 
     val presenter: StockCardPresenter by moxyPresenter {
         val repository = arguments?.getParcelable<Stock>(STOCK_CARD_ARG) as Stock
-        StockCardPresenter(repository)
+        StockCardPresenter(repository).apply {
+            App.instance.appComponent.inject(this)
+        }
     }
 
     override fun onCreateView(
