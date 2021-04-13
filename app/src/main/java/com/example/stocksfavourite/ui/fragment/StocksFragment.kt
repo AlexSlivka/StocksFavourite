@@ -32,7 +32,7 @@ class StocksFragment : MvpAppCompatFragment(), StocksView, BackButtonListener {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val view = FragmentStocksBinding.inflate(inflater, container, false).also {
             vb = it
         }.root
