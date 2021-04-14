@@ -9,4 +9,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="color_menu_other">#BABABA</color>
     <color name="color_price_change">#24B25D</color>
+    <color name="color_of_genre">#FF3466</color>
+    <color name="dark_grey_of_reviews">#6D6D80</color>
+    <color name="dark_grey_of_movie_length">#565665</color>
+    <color name="grey_name_of_actors">#D8D8D8</color>
 </resources>
